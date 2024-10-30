@@ -18,8 +18,7 @@ Das Ziel ist es, ein System zu entwickeln, das diese Prozesse automatisiert und 
 |---|---|
 | Titel der Semesterarbeit | Continuous Code Quality check  |
 | Projekt Experte | Rohr Philipp |
-| DevOps Experte | Pangri Thanam |
-| DevOps Experte | Morgenegg Patrick |
+| DevOps Experte | Dörzbach Armin |
 | Student | Dany Ambühl  |
 | Problemstellung | Die Semesterarbeit befasst sich mit dem Problem der Qualitätskontrolle von Ansible-Playbooks und der Standardisierung von YAML-Dateien.  |
 | Ziele  | - Implementierung einer Open-Source-Lösung für Codequalitätsprüfungen |

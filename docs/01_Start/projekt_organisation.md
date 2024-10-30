@@ -25,8 +25,7 @@ title Scrum Team Structure
 %% Define persons
 Person(Philipp, "Rohr Philipp", "Expert")
 Person(Marcel, "Marcel", "Expert")
-Person(Pangri, "Pangri Thanam", "Expert")
-Person(Morgenegg, "Morgenegg Patrick", "Expert")
+Person(Armin, "Dörzbach Armin", "Expert")
 Person(End, "End User")
 
 %% Define boundary with Dany's roles
@@ -45,11 +44,9 @@ Boundary(b3, "Swisscom") {
 
 %% Define relationships
 Rel(Philipp, Dany, "Reviews, and feedback")
-Rel(Pangri, Dany, "Consulting, reviews, and feedback")
-Rel(Morgenegg, Dany, "Consulting, reviews, and feedback")
+Rel(Armin, Dany, "Consulting, reviews, and feedback")
 Rel(Marcel, Philipp, "Reviews")
-Rel(Marcel, Pangri, "Reviews")
-Rel(Marcel, Morgenegg, "Reviews")
+Rel(Marcel, Armin, "Reviews")
 Rel(Dany, End, "Feedback ")
 Rel(End, Dany, "Feedback ")
 Rel(tbz, Dany, "foster")
