@@ -6,9 +6,9 @@ dictionaryDefinitions:
     addWords: true
 dictionaries:
   # Use `cspell-cli trace word` to check where a work is defined
-  # - en_US
   # https://github.com/streetsidesoftware/cspell-dicts/blob/main/dictionaries/de_DE/README.md
   # Add Environment variable: C:\Users\%Username%\AppData\Roaming\npm  -> restart cmd
+  - en_US
   - de_de
   - bash
   - words
@@ -17,5 +17,10 @@ dictionaries:
 ignorePaths:
   - cspell.config.yaml
   - pre-commit-config.yaml
-  # Other
   - "*.svg"
+
+# https://cspell.org/configuration/patterns/#patterns
+languageSettings:
+  - languageId: markdown
+    ignoreRegExpList:
+      - /ß/

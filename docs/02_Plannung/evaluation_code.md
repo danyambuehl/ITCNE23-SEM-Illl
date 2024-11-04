@@ -61,11 +61,9 @@ Die Wahl der richtigen Open-Source-Lösung für Codequalitätsprüfungen ist von
 
 ### Vorteile
 
-ß
-
-- Erkennt eine Vielzahl von Problemen, einschließlich, potenziellen Fehlern und Sicherheitsproblemen.
+- Erkennt eine Vielzahl von Problemen, einschliesslich, potenziellen Fehlern und Sicherheitsproblemen.
 - Hochgradig konfigurierbar und erweiterbar durch benutzerdefinierte Regeln und Plugins.
-- Große Benutzerbasis und aktive Community, die kontinuierlich zur Verbesserung und Erweiterung beiträgt.
+- Grosse Benutzerbasis und aktive Community, die kontinuierlich zur Verbesserung und Erweiterung beiträgt.
 
 ### Nachteile
 
