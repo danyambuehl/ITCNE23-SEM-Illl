@@ -14,7 +14,7 @@ Die Issues werden im Kanban-Board organisiert und in den Phasen "Backlog", "Read
 
 ## Issue Beispiel
 
-[Issue für Benachrichtigung](https://github.com/danyambuehl/ITCNE23-SEM-Ill/issues/21){: .btn }
+[Issue für Benachrichtigung](https://github.com/danyambuehl/ITCNE23-SEM-Illl/issues/12){: .btn }
 
 ## Issue Workflow
 

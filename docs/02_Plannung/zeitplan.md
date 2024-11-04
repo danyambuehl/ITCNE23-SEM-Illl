@@ -40,5 +40,5 @@ Um den detaillierten Zeitplan einzusehen, öffnen Sie bitte das Projektmanagemen
 |02.12.2024             | Einzelbesprechung Zwischenstand                       | Studierende | Expert   |
 |06.01.2025             | Einzelbesprechung Zwischenstand                       | Studierende | Expert   |
 |29.01.2025             | Abgabe der Arbeit / Schlusspräsentationen             | Studierende |          |
-|07.02.25               | Notenvorschlag                                        | Expert      | Lehrgangsleiter |
-|28.02.25               | Mitteilung der Noten                                  | Lehrgangsleiter | Studierende |
+|07.02.2025               | Notenvorschlag                                        | Expert      | Lehrgangsleiter |
+|28.02.2025               | Mitteilung der Noten                                  | Lehrgangsleiter | Studierende |

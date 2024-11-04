@@ -9,7 +9,7 @@ parent: Planung
 
 ## SMART-Ziele [^1]
 
-<img src="../img/smart_ziele.webp" alt="Smart Ziele" style="width:75%;"/> [^2]
+<img src="../img/smart_ziele_2.jpeg" alt="Smart Ziele" style="width:75%;"/> [^2]
 
 ## Was sind SMART-Ziele?
 

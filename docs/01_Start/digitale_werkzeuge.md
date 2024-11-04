@@ -30,7 +30,7 @@ Es wird Jekyll site und eine Github Pipeline verwendet um die Dokumentation des 
 
 Jekyll ist ein statischer Website-Generator, der es Benutzern ermöglicht, Markdown-Dateien in statische Websites zu konvertieren.
 
-### <img src="../img/mermaid-logo.svg" width="64"> Mermaid [^5]
+### <img src="../img/mermaid_icon.svg" width="64"> Mermaid [^5]
 
 Mermaid ist ein Diagramm-Tool, das es Benutzern ermöglicht, Diagramme direkt in Markdown-Dateien zu erstellen.
 
@@ -46,7 +46,7 @@ SonarQube ist eine Open-Source-Plattform, die automatisierte Code-Reviews durchf
 
 Ansible-lint ist ein Werkzeug, das Ansible Playbooks auf Best Practices und Verhaltensfehler prüft.
 
-### <img src="../img/noip.png" width="64"> K3s Kubernetes [^9]
+### <img src="../img/ks_icon.png" width="64"> K3s Kubernetes [^9]
 
 K3s ist eine leichtgewichtige Kubernetes-Distribution, die von Rancher entwickelt wurde.
 Sie ist besonders platzsparend und verbraucht weniger Ressourcen als herkömmliche Distributionen.
