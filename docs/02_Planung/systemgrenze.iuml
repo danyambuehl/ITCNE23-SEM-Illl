@@ -13,12 +13,12 @@ package "Systemgrenze" {
     component "REST-API"
     component "MySQL"
   }
-  
+
 }
 
 actor "End-User"
 component "Git Pipeline"
-component "noip"
+component "No-IP"
 component "Cloud Provider"
 component "Pushover"
 component "OpenAI"
@@ -33,8 +33,8 @@ component "Genossenschaften"
 [End-User] <-down-> [Flask Frontend] : S5
 [End-User] <-down-> [REST-API] : S6
 [Genossenschaften] <-down- [Systemgrenze] : S7
-[noip] <-down-> [Cloud Provider]: S8
-[noip] <-up-> [Git Pipeline]: S9
+[No-IP] <-down-> [Cloud Provider]: S8
+[No-IP] <-up-> [Git Pipeline]: S9
 [OpenAI] -up-> [REST-API] : S10
 
 @enduml

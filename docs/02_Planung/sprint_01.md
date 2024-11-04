@@ -18,7 +18,7 @@ nav_order: 10
 
 ```mermaid
 gantt
-    title Projektplan ITCNE23-SEM-llll
+    title Projektplan ITCNE24-SEM-llll
     dateFormat  DD.MM.YY
     axisFormat  %d.%m.%Y
 

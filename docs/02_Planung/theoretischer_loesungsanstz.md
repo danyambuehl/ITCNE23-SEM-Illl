@@ -2,7 +2,7 @@
 layout: default
 title: Theoretischer Lösungsansatz
 parent: Planung
-nav_order: 8 
+nav_order: 8
 ---
 
 ## Theoretischer Lösungsansatz
@@ -36,16 +36,18 @@ Die Benachrichtigungen werden über die Pushover-API gesendet, da sie einfach zu
 
 Die Plattform wird in Docker-Containern bereitgestellt, um die Bereitstellung und Skalierung zu vereinfachen. Die Container werden mit Docker Compose verwaltet, um die Konfiguration zu vereinfachen und die Wartung zu erleichtern.
 
-Die Plattform wird auf einem virtuellen Server gehostet, um die Skalierbarkeit und Ausfallsicherheit zu gewährleisten. Der Server wird von einem Cloud-Anbieter bereitgestellt, um die Wartung und den Betrieb zu vereinfachen.
+Die Plattform wird auf einem virtuellen Server , um die Skalierbarkeit und Ausfallsicherheit zu gewährleisten. Der Server wird von einem Cloud-Anbieter bereitgestellt, um die Wartung und den Betrieb zu vereinfachen.
 CI/CD-Pipelines werden verwendet, um die Bereitstellung zu automatisieren und die Qualität zu gewährleisten und die Verwendung durch dritte zu vereinfachen.
 
 Die Plattform wird in einem Git-Repository verwaltet, um die Zusammenarbeit zu erleichtern und die Versionskontrolle zu gewährleisten.
 
 ### Monitoring
 
-Als Monitoring-Tool wird flask_monitoringdashboard verwendet, da es einfach zu bedienen ist und eine Vielzahl von Funktionen bietet, die die Überwachung und Wartung erleichtern.
+Als Monitoring-Tool wird  verwendet, da es einfach zu bedienen ist und eine Vielzahl von Funktionen bietet, die die Überwachung und Wartung erleichtern.
 
 ## Service Design
+
+/* cSpell:disable */
 
 ```mermaid
 flowchart TB
@@ -57,10 +59,10 @@ flowchart TB
             Docker["Docker"]
         end
         %% Define Entwickler Block
-        subgraph NOIP["NoIP"]
+        subgraph No-IP["No-IP"]
             semsearch-bau.ddns.net
         end
-        
+
         %% Define AWS Infrastructure Block
         subgraph Infrastructure["AWS Infrastructure (EC2)"]
             direction TB
@@ -70,13 +72,13 @@ flowchart TB
             subgraph sem-search-prod-api
             FlaskFrontend["Flask Frontend"]
             Monitoring["Monitoring"]
-            RESTAPI["REST-API"]
+            REST["REST-API"]
             end
 
             subgraph sem-search-prod-db
             Datenbank["Datenbank"]
             end
-            noipagent["NoIP Agent"]
+            No-IPagent["No-IP Agent"]
 
         end
         end
@@ -100,32 +102,32 @@ flowchart TB
         end
         %% Define Genossenschaften Block
         subgraph Genossenschaften
-            Website 
+            Website
         end
 
     EndUser["Mobile Phone"]
 
     %% Define Relationships
-    FlaskFrontend <-->|calls| RESTAPI
+    FlaskFrontend <-->|calls| REST
     Monitoring <--> FlaskFrontend
-    Monitoring <--> RESTAPI
-    RESTAPI <-->|queries| Datenbank
+    Monitoring <--> REST
+    REST <-->|queries| Datenbank
     GitPipeline -->|builds images| Registry
     GitRepository -->| triggers | GitPipeline
     GitRepository -->| has| GitVariables
     Registry -->|Image gets deployed on | Infrastructure
-    RESTAPI -->|sends notifications to| Pushover
+    REST -->|sends notifications to| Pushover
     Pushover -->|sends Notification| EndUser
-    RESTAPI <-->|queries| OpenAi
+    REST <-->|queries| OpenAi
     Git <--> |push/pull| GitRepository
-    RESTAPI <--> |Web Scraping| Genossenschaften
-    GitVariables --> |contains| NOIP
-    NOIP --> |Dynamic DNS| noipagent
+    REST <--> |Web Scraping| Genossenschaften
+    GitVariables --> |contains| No-IP
+    No-IP --> |Dynamic DNS| No-IPagent
     FlaskFrontend <--> |calls| EndUser
 
     %% Define Styles
     style Entwicklerumgebung fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style NOIP fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
+    style No-IP fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
     style Microservices fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
     style GitLab_Infrastructure fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
     style Infrastructure fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
@@ -133,6 +135,8 @@ flowchart TB
     style OpenAi fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
     style Genossenschaften fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
 ```
+
+/* cSpell:enable */
 
 ## Begründung
 

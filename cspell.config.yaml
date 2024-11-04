@@ -7,7 +7,6 @@ dictionaryDefinitions:
 dictionaries:
   # Use `cspell-cli trace word` to check where a work is defined
   # https://github.com/streetsidesoftware/cspell-dicts/blob/main/dictionaries/de_DE/README.md
-  # Add Environment variable: C:\Users\%Username%\AppData\Roaming\npm  -> restart cmd
   - en_US
   - de_de
   - bash
@@ -17,6 +16,7 @@ dictionaries:
 ignorePaths:
   - cspell.config.yaml
   - pre-commit-config.yaml
+  - _config.yml
   - "*.svg"
 
 # https://cspell.org/configuration/patterns/#patterns

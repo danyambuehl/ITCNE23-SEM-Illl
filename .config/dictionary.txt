@@ -6,3 +6,15 @@ codespell
 commitlint
 Semesterarbeit
 SonarQube
+Einreichungsformular
+gantt
+ITCNE24-SEM-llll
+startuml
+skinparam
+enduml
+SEUSAG
+DDNS
+ddns
+GPTAPI
+Benachrichtigungsfunktion
+NABC
