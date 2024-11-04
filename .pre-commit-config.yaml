@@ -6,13 +6,13 @@ ci:
   autofix_commit_msg: |
     chore: auto fixes from pre-commit.com hooks
 repos:
-  # - repo: https://github.com/streetsidesoftware/cspell-cli
-  #   rev: v8.15.2
-  #   hooks:
-  #     - id: cspell
-  #       # entry: codespell --relative
-  #       args: [--relative, --no-progress, --no-summary]
-  #       name: Spell check with cspell
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.15.2
+    hooks:
+      - id: cspell
+        # entry: codespell --relative
+        args: [--relative, --no-progress, --no-summary]
+        name: Spell check with cspell
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:

@@ -3,3 +3,4 @@ ansiblelint
 autofix
 autoupdate
 codespell
+commitlint

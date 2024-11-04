@@ -12,5 +12,6 @@ dictionaries:
   - python
 ignorePaths:
   - cspell.config.yaml
+  - pre-commit-config.yaml
   # Other
   - "*.svg"
