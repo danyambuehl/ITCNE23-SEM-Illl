@@ -34,15 +34,15 @@ Jekyll ist ein statischer Website-Generator, der es Benutzern ermöglicht, Markd
 
 Mermaid ist ein Diagramm-Tool, das es Benutzern ermöglicht, Diagramme direkt in Markdown-Dateien zu erstellen.
 
-### <img src="../img/GitLab_icon.png" width="64"> GitLab [^6]
+### <img src="../img/GitLab_icon2.png" width="64"> GitLab [^6]
 
 GitLab ist eine webbasierte DevOps-Lebenszyklus-Tool-Plattform, die nicht nur als Git-Repository-Manager dient, sondern auch Funktionen für Issue-Tracking und Continuous Integration/Continuous Deployment (CI/CD) in einer einzigen Anwendung bietet,
 
-### <img src="../img/SonarQube_icon.png" width="64"> SonarQube [^7]
+### <img src="../img/SonarQube2_icon.png" width="64"> SonarQube [^7]
 
 SonarQube ist eine Open-Source-Plattform, die automatisierte Code-Reviews durchführt, um Programmierfehler, Bugs, stilistische Fehler und unsichere Codes zu identifizieren und hilft so, die Codequalität zu verbessern.
 
-### <img src="../img/Ansible_icon.png" width="64"> Ansible-Lint [^8]
+### <img src="../img/Ansible_icon2.png" width="64"> Ansible-Lint [^8]
 
 Ansible-lint ist ein Werkzeug, das Ansible Playbooks auf Best Practices und Verhaltensfehler prüft.
 

@@ -47,7 +47,7 @@ Als Monitoring-Tool wird  verwendet, da es einfach zu bedienen ist und eine Viel
 
 ## Service Design
 
-/* cSpell:disable */
+<!-- /* cSpell:disable */ -->
 
 ```mermaid
 flowchart TB
@@ -136,7 +136,7 @@ flowchart TB
     style Genossenschaften fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
 ```
 
-/* cSpell:enable */
+<!-- /* cSpell:enable */ -->
 
 ## Begründung
 

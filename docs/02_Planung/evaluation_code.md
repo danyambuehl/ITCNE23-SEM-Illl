@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Evaluation Open-Source-Lösung für Codequalitätsprüfungen
+title: Evaluation
 parent: Planung
 nav_order: 6
 ---

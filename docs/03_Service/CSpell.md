@@ -25,7 +25,17 @@ npm install -g @cspell/dict-de-de   # Installation des deutschen Wörterbuchs
 cspell link add @cspell/dict-de-de  # Verknüpfen des deutschen Wörterbuchs
 cspell link list                    # Überprüfen, ob das Wörterbuch korrekt verknüpft ist
 cspell --config cspell.config.yaml docs/02_Planung/evaluation_code.md  # Überprüfen einer Datei mit Config File
+
+```
+
+### Einstellungen Dokument
+
+In einem Dokument kann die Rechtschreibprüfung für eine Zeile oder einen Abschnitt deaktiviert werden:
+
+```bash
 // cspell:disable-line           # Deaktivieren der Rechtschreibprüfung in einer Linie
+/* cSpell:disable */            # Deaktiviert die Rechtschreibprüfung
+/* cSpell:enable */             # Aktiviert die Rechtschreibprüfung
 ```
 
 ### Konfiguration [^2] [^3] [^4]
@@ -58,6 +68,12 @@ languageSettings:
     ignoreRegExpList:
       - /ß/
 ```
+
+### VSCode-Integration
+
+In Visual Studio Code kann `cspell` über die Extension `Code Spell Checker` verwendet werden.
+Dabei wird auch die Konfiguration aus der Datei `cspell.config.yaml` verwendet.
+Und man die Rechtschreibprüfung direkt in der Entwicklungsumgebung durchführen ohne zuerst commit zu müssen.
 
 ## Quellen und Referenzen
 
