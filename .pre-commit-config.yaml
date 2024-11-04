@@ -13,6 +13,7 @@ repos:
         # entry: codespell --relative
         args: [--relative, --no-progress, --no-summary]
         name: Spell check with cspell
+        files: \.(md|txt|py|js|ts|html|css|json)$
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
