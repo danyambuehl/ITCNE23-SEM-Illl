@@ -1,5 +1,18 @@
 ---
+ci:
+  # format compatible with commitlint
+  autoupdate_commit_msg: "chore: pre-commit autoupdate"
+  autoupdate_schedule: monthly
+  autofix_commit_msg: |
+    chore: auto fixes from pre-commit.com hooks
 repos:
+  # - repo: https://github.com/streetsidesoftware/cspell-cli
+  #   rev: v8.15.2
+  #   hooks:
+  #     - id: cspell
+  #       # entry: codespell --relative
+  #       args: [--relative, --no-progress, --no-summary]
+  #       name: Spell check with cspell
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
@@ -13,10 +26,10 @@ repos:
   #   rev: v2.5.1
   #   hooks:
   #     - id: prettier
-  - repo: https://github.com/codespell-project/codespell    # checks for typos.
-    rev: v2.1.0
-    hooks:
-      - id: codespell
+  # - repo: https://github.com/codespell-project/codespell    # checks for typos.
+  #   rev: v2.1.0
+  #   hooks:
+  #     - id: codespell
   - repo: https://github.com/Woile/commitizen     # Check if commit messages are formatted correctly
     rev: v2.20.3
     hooks:
