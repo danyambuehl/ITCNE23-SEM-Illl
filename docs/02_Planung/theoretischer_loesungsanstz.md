@@ -10,40 +10,45 @@ nav_order: 8
 Die in der Planung erarbeiteten Anforderungen und Ziele sollen in diesem Kapitel in einem theoretischen Lösungsansatz zusammengefasst werden.
 Dieser Lösungsansatz soll die Grundlage für die spätere Umsetzung bilden.
 
-Im Prinzip soll die Plattform die Möglichkeit bieten, Webseiten einzelner Genossenschaftswohnungen einer Liste hinzuzufügen und zu verwalten.
-Auf diesen Webseiten sollte regelmässig nach neuen Wohnungsangeboten gesucht werden.
-Sobald ein neuer Eintrag erscheint, sollte eine Benachrichtigung an den Benutzer gesendet werden. Diese Benachrichtigung sollte direkt auf das Smartphone des Benutzers zugestellt werden.
+Im Prinzip soll das System die Möglichkeit bieten, Ansible-Playbooks und YAML-Dateien automatisiert auf Qualität und Standards zu prüfen.
+Sobald Code in das Repository eingecheckt wird, sollen automatische Prüfungen durchgeführt und die Ergebnisse präsentiert werden.
 
-Dieses Projekt soll Open Source sein und für alle zugänglich und erschwinglich sein.
+Die Integration in den Entwicklungsprozess soll durch Pre-Commit Hooks erfolgen, die die Entwickler bei der Einhaltung der Standards unterstützen.
 
 ### Architektur
 
-Für das Projekt werden Microservices verwendet, um mehrere Vorteile zu nutzen: erhöhte Flexibilität und Skalierbarkeit, erleichterte Wartung und Weiterentwicklung sowie verbesserte Ausfallsicherheit durch die Isolierung von Diensten. Als Programmiersprache wird Python eingesetzt, da es eine der beliebtesten Programmiersprachen ist und eine Vielzahl von Bibliotheken und Frameworks bietet, die die Entwicklung erleichtern.
+Für das Projekt wird eine Open-Source-Lösung implementiert, die folgende Komponenten umfasst:
 
-### Datenbank
+- **Codequalitätsprüfung**: Integration von SonarQube als primäres Tool für die Codeanalyse
+- **Infrastruktur**: Verwendung von k3s als Kubernetes-Distribution für die Bereitstellung der Plattform
+- **Ansible-Lint**: Spezifische Prüfung für Ansible-Playbooks
+- **YAML-Validierung**: Standardisierung und Überprüfung von YAML-Dateien
+- **CI/CD-Pipeline**: Automatisierte Ausführung der Prüfungen bei jedem Commit
 
-Als Datenbank wird MongoDB oder Datenbank verwendet, da beide Datenbanken eine hohe Leistung und Skalierbarkeit bieten.
+### Tools und Technologien
 
-### Frontend
+- **GitLab Pipeline**: Für die Implementierung der CI/CD-Pipeline
+- **SonarQube**: Für die statische Codeanalyse
+- **SonarScanner**: Für die Integration von SonarQube in den Build-Prozess
+- **Sonar-Ansible-plugin**: Für die spezifische Prüfung von Ansible-Playbooks
+- **YAML SonarQube Plugin**: Für die Überprüfung von YAML-Dateien
+- **Pre-commit**: Für die Integration von Prüfungen in den Entwicklungsprozess
+- **CSpell**: Für die Rechtschreibprüfung in Code, Dokumentationen und Kommentaren
 
-Die Benutzeroberfläche ist in HTML geschrieben und sehr einfach gehalten, da es nicht der Schwerpunkt des Projekts ist. Die Benutzeroberfläche wird mit dem Flask-Framework erstellt, da es einfach zu bedienen ist und eine Vielzahl von Erweiterungen bietet, die die Entwicklung erleichtern.
+### Automatisierung
 
-### Benachrichtigungsdienst
+Die Plattform wird vollständig automatisiert:
 
-Die Benachrichtigungen werden über die Pushover-API gesendet, da sie einfach zu bedienen ist und eine Vielzahl von Funktionen bietet, die die Entwicklung erleichtern.
+- Automatische Ausführung bei jedem Push in das Repository
+- Automatische Erstellung von Reports und Dashboards
+- Hilfestellung im Entwicklungsprozess durch Pre-Commit Hooks
 
-### DevOps
+### Monitoring und Reporting
 
-Die Plattform wird in Docker-Containern bereitgestellt, um die Bereitstellung und Skalierung zu vereinfachen. Die Container werden mit Docker Compose verwaltet, um die Konfiguration zu vereinfachen und die Wartung zu erleichtern.
-
-Die Plattform wird auf einem virtuellen Server , um die Skalierbarkeit und Ausfallsicherheit zu gewährleisten. Der Server wird von einem Cloud-Anbieter bereitgestellt, um die Wartung und den Betrieb zu vereinfachen.
-CI/CD-Pipelines werden verwendet, um die Bereitstellung zu automatisieren und die Qualität zu gewährleisten und die Verwendung durch dritte zu vereinfachen.
-
-Die Plattform wird in einem Git-Repository verwaltet, um die Zusammenarbeit zu erleichtern und die Versionskontrolle zu gewährleisten.
-
-### Monitoring
-
-Als Monitoring-Tool wird  verwendet, da es einfach zu bedienen ist und eine Vielzahl von Funktionen bietet, die die Überwachung und Wartung erleichtern.
+- Generierung von detaillierten Berichten über gefundene Probleme
+- Nachvollziehbarkeit der Änderungen über Zeit
+- Dashboard für die Visualisierung der Codequalität
+- Trendanalysen über Zeit
 
 ## Service Design
 
@@ -51,96 +56,47 @@ Als Monitoring-Tool wird  verwendet, da es einfach zu bedienen ist und eine Viel
 
 ```mermaid
 flowchart TB
+    direction TB
+    subgraph GitLab["GitLab Environment"]
+        Repository
+        Pipeline["GitLab Pipeline"]
+        Pages["GitLab Pages"]
+    end
 
-        direction TB
-        %% Define Entwickler Block
-        subgraph Entwicklerumgebung["Entwicklerumgebung"]
-            Git
-            Docker["Docker"]
-        end
-        %% Define Entwickler Block
-        subgraph No-IP["No-IP"]
-            semsearch-bau.ddns.net
-        end
+    subgraph QualityTools["Quality Tools"]
+        SonarQube
+        AnsibleLint["Ansible-Lint"]
+        CSpell["CSpell Checker"]
+    end
 
-        %% Define AWS Infrastructure Block
-        subgraph Infrastructure["AWS Infrastructure (EC2)"]
-            direction TB
-        %% Define Microservices Block
-        subgraph Microservices["Microservices"]
-            direction TB
-            subgraph sem-search-prod-api
-            FlaskFrontend["Flask Frontend"]
-            Monitoring["Monitoring"]
-            REST["REST-API"]
-            end
+    subgraph Reports["Reporting"]
+        Dashboard
+        Documentation
+    end
 
-            subgraph sem-search-prod-db
-            Datenbank["Datenbank"]
-            end
-            No-IPagent["No-IP Agent"]
-
-        end
-        end
-        %% Define GitLab Infrastructure Block
-        subgraph GitLab_Infrastructure["GitLab Infrastructure"]
-            direction TB
-            GitRepository["Git Repository"]
-            GitVariables["Git Variables"]
-            GitPipeline["Git Pipeline"]
-            Registry["Docker Registry"]
-        end
-        %% Define Pushover Block
-        subgraph Pushover
-            direction TB
-            PushoverService
-        end
-        %% Define OpenAI Block
-        subgraph OpenAi
-            direction TB
-            ChatGPTAPI
-        end
-        %% Define Genossenschaften Block
-        subgraph Genossenschaften
-            Website
-        end
-
-    EndUser["Mobile Phone"]
-
-    %% Define Relationships
-    FlaskFrontend <-->|calls| REST
-    Monitoring <--> FlaskFrontend
-    Monitoring <--> REST
-    REST <-->|queries| Datenbank
-    GitPipeline -->|builds images| Registry
-    GitRepository -->| triggers | GitPipeline
-    GitRepository -->| has| GitVariables
-    Registry -->|Image gets deployed on | Infrastructure
-    REST -->|sends notifications to| Pushover
-    Pushover -->|sends Notification| EndUser
-    REST <-->|queries| OpenAi
-    Git <--> |push/pull| GitRepository
-    REST <--> |Web Scraping| Genossenschaften
-    GitVariables --> |contains| No-IP
-    No-IP --> |Dynamic DNS| No-IPagent
-    FlaskFrontend <--> |calls| EndUser
-
-    %% Define Styles
-    style Entwicklerumgebung fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style No-IP fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style Microservices fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style GitLab_Infrastructure fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style Infrastructure fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style Pushover fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style OpenAi fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
-    style Genossenschaften fill:#FFA07A,stroke:#FF8C00,stroke-width:4px
+    Repository -->|trigger| Pipeline
+    Pipeline -->|execute| QualityTools
+    QualityTools -->|generate| Reports
+    Reports -->|publish| Pages
 ```
-
 <!-- /* cSpell:enable */ -->
 
 ## Begründung
 
-Der gewählte Lösungsansatz nutzt eine moderne, skalierbare Architektur und bewährte Technologien, um Flexibilität und Effizienz zu maximieren.
-Die automatisierte Prozesse in der Entwicklung und Bereitstellung erhöhen die Zuverlässigkeit und Geschwindigkeit des Projekts.
-Monitoring-Tools sorgen für eine proaktive Überwachung und Wartung, während Benachrichtigungsdienste die Benutzerfreundlichkeit verbessern.
-Die Verwendung von Open-Source-Technologien und Cloud-Hosting ermöglicht eine kostengünstige und zugängliche Lösung für alle Benutzer.
+Der gewählte Lösungsansatz bietet mehrere Vorteile:
+
+- Integration in bestehende Entwicklungsprozesse durch GitLab Pipeline
+- Automatisierte Qualitätssicherung ohne manuelle Eingriffe
+- Standardisierung durch vordefinierte Regeln
+- Transparente Dashboards und Berichte für Entwickler und Management
+- Skalierbarkeit durch Kubernetes-Plattform
+- Flexibilität durch Open-Source-Tools und Plugins
+- Unterstützung für verschiedene Sprachen und Technologien
+- Verbesserung der Codequalität und Lesbarkeit
+- Frühzeitige Erkennung von Fehlern und Problemen
+- Effiziente Zusammenarbeit im Team
+- Erhöhung der Produktivität und Qualität
+- Reduzierung von manuellen Aufwänden und Fehlern
+- Kontinuierliche Verbesserung der Prozesse und Ergebnisse
+- Erfüllung von Qualitätsstandards und Best Practices
+- Einhaltung von Sicherheitsrichtlinien und Compliance-Vorgaben

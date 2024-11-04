@@ -33,9 +33,9 @@ cspell --config cspell.config.yaml docs/02_Planung/evaluation_code.md  # Überpr
 In einem Dokument kann die Rechtschreibprüfung für eine Zeile oder einen Abschnitt deaktiviert werden:
 
 ```bash
-// cspell:disable-line           # Deaktivieren der Rechtschreibprüfung in einer Linie
-/* cSpell:disable */            # Deaktiviert die Rechtschreibprüfung
-/* cSpell:enable */             # Aktiviert die Rechtschreibprüfung
+// cspell:disable-line                   # Deaktivieren der Rechtschreibprüfung in einer Linie
+<!-- /* cSpell:disable */ -->            # Deaktiviert die Rechtschreibprüfung
+<!-- /* cSpell:enable */ -->             # Aktiviert die Rechtschreibprüfung
 ```
 
 ### Konfiguration [^2] [^3] [^4]
