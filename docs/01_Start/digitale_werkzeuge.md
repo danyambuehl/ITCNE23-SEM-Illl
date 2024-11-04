@@ -26,7 +26,7 @@ Github Actions ist ein Tool, das es Benutzern ermöglicht, CI/CD-Pipelines direk
 Github Pages ist ein Hosting-Service, der es Benutzern ermöglicht, statische Websites direkt aus einem GitHub-Repository zu erstellen.
 Es wird Jekyll site und eine Github Pipeline verwendet um die Dokumentation des Projekts Automatisiert zu veröffentlichen.
 
-### <img src="../img/jeykll_icon.png" width="64"> Jekyll [^4]
+### <img src="../img/Jekyll_icon.png" width="64"> Jekyll [^4]
 
 Jekyll ist ein statischer Website-Generator, der es Benutzern ermöglicht, Markdown-Dateien in statische Websites zu konvertieren.
 
@@ -34,15 +34,15 @@ Jekyll ist ein statischer Website-Generator, der es Benutzern ermöglicht, Markd
 
 Mermaid ist ein Diagramm-Tool, das es Benutzern ermöglicht, Diagramme direkt in Markdown-Dateien zu erstellen.
 
-### <img src="../img/gitlab_icon.png" width="64"> GitLab [^6]
+### <img src="../img/GitLab_icon.png" width="64"> GitLab [^6]
 
 GitLab ist eine webbasierte DevOps-Lebenszyklus-Tool-Plattform, die nicht nur als Git-Repository-Manager dient, sondern auch Funktionen für Issue-Tracking und Continuous Integration/Continuous Deployment (CI/CD) in einer einzigen Anwendung bietet,
 
-### <img src="../img/sonarqube_icon.png" width="64"> SonarQube [^7]
+### <img src="../img/SonarQube_icon.png" width="64"> SonarQube [^7]
 
 SonarQube ist eine Open-Source-Plattform, die automatisierte Code-Reviews durchführt, um Programmierfehler, Bugs, stilistische Fehler und unsichere Codes zu identifizieren und hilft so, die Codequalität zu verbessern.
 
-### <img src="../img/ansible_icon.png" width="64"> Ansible-Lint [^8]
+### <img src="../img/Ansible_icon.png" width="64"> Ansible-Lint [^8]
 
 Ansible-lint ist ein Werkzeug, das Ansible Playbooks auf Best Practices und Verhaltensfehler prüft.
 
@@ -56,9 +56,9 @@ Sie ist besonders platzsparend und verbraucht weniger Ressourcen als herkömmlic
 [^1]:Github. (n.d.). Github Projects. [Retrieved from](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 [^2]:Github. (n.d.). Github Pages. [Retrieved from](https://pages.github.com/)
 [^3]:Github Actions [Retrieved from](https://github.com/features/actions)
-[^4]:Quickstart Jekyll [Retrieved from](https://jekyllrb.com/docs/)
+[^4]:Jekyll [Retrieved from](https://jekyllrb.com/docs/)
 [^5]:Mermaid Examples [Retrieved from](https://mermaid.js.org/syntax/examples.html)
-[^6]:Gitlab [Retrieved from](https://www.gitlab.com)
-[^7]:Sonar Qube [Retrieved from](https://www.sonarsource.com/products/sonarqube/)
+[^6]:GitLab [Retrieved from](https://www.gitlab.com)
+[^7]:SonarQube [Retrieved from](https://www.sonarsource.com/products/sonarqube/)
 [^8]:Ansible-lint [Retrieved from](https://github.com/ansible/ansible-lint)
 [^9]:K3s[Retrieved from](https://k3s.io/)

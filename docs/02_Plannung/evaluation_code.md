@@ -9,7 +9,7 @@ nav_order: 6
 
 Die Wahl der richtigen Open-Source-Lösung für Codequalitätsprüfungen ist von grosser Bedeutung. In diesem Abschnitt werde ich die Vor- und Nachteile von drei Open-Source-Lösungen vergleichen, um eine nachvollziehbare Entscheidung für die beste Lösung für mein Projekt zu treffen. Am Ende werde ich eine Entscheidungsmatrix erstellen, um die verschiedenen Kriterien zu bewerten und eine endgültige Entscheidung zu treffen.
 
-## 1. Sonarqube [^1]
+## 1. SonarQube [^1]
 
 ### Features
 
@@ -17,7 +17,7 @@ Die Wahl der richtigen Open-Source-Lösung für Codequalitätsprüfungen ist von
 - Statische Code-Analyse zur Erkennung von Code-Problemen, Bugs und Sicherheitslücken.
 - Integration in CI/CD-Pipelines.
 - Detaillierte Dashboards und Berichte.
-- Verfügbar als Container: Sonarqube Docker.
+- Verfügbar als Container: SonarQube Docker.
 
 ### Vorteile
 
@@ -27,7 +27,7 @@ Die Wahl der richtigen Open-Source-Lösung für Codequalitätsprüfungen ist von
 
 ### Nachteile
 
-- Benötigt Einrichtung und Wartung des Sonarqube-Servers.
+- Benötigt Einrichtung und Wartung des SonarQube-Servers.
 - Einige erweiterte Funktionen sind nur in der kostenpflichtigen Enterprise-Version verfügbar.
 
 ## 2. ESLint [^2]
@@ -54,14 +54,16 @@ Die Wahl der richtigen Open-Source-Lösung für Codequalitätsprüfungen ist von
 
 ### Features
 
-- Pylint analysiert Python-Code auf Code-Qualitätsprobleme, potenzielle Fehler und Stilabweichungen.
+- Pylint analysiert Python-Code auf Code-Qualitätsprobleme, potenzielle Fehler.
 - Anpassbare Regelwerke zur Durchsetzung von Coding-Standards und Best Practices.
 - Unterstützt die Integration in CI/CD-Pipelines und verschiedene Entwicklungsumgebungen.
 - Generiert umfassende Berichte über gefundene Probleme und Vorschläge zur Verbesserung.
 
 ### Vorteile
 
-- Erkennt eine Vielzahl von Problemen, einschließlich Stilabweichungen, potenziellen Fehlern und Sicherheitsproblemen.
+ß
+
+- Erkennt eine Vielzahl von Problemen, einschließlich, potenziellen Fehlern und Sicherheitsproblemen.
 - Hochgradig konfigurierbar und erweiterbar durch benutzerdefinierte Regeln und Plugins.
 - Große Benutzerbasis und aktive Community, die kontinuierlich zur Verbesserung und Erweiterung beiträgt.
 
@@ -113,9 +115,9 @@ Spezifisch für die Anwendung in einem Kubernetes-Cluster und die Integration in
 
 ### Quellen
 
-[^1]: SonarQube [Retrieved from](https://www.sonarqube.org/)
+[^1]: SonarQube [Retrieved from](https://www.SonarQube.org/)
 [^2]: ESLint [Retrieved from](https://eslint.org/)
 [^3]: Pylint [Retrieved from](https://pylint.pycqa.org/)
 [^4]: Entscheidungsmatrix [Retrieved from](https://de.wikipedia.org/wiki/Entscheidungsmatrix)
-[^5]: ESLint vs SonarQube [Retrieved from](https://stackshare.io/stackups/eslint-vs-sonarqube)
-[^6]: Pylint vs SonarQube [Retrieved from](https://stackshare.io/stackups/pylint-vs-sonarqube)
+[^5]: ESLint vs SonarQube [Retrieved from](https://stackshare.io/stackups/eslint-vs-SonarQube)
+[^6]: Pylint vs SonarQube [Retrieved from](https://stackshare.io/stackups/pylint-vs-SonarQube)

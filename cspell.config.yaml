@@ -1,4 +1,5 @@
 ---
+# https://cspell.org/docs/dictionaries-custom/
 dictionaryDefinitions:
   - name: words
     path: .config/dictionary.txt

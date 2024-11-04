@@ -1,3 +1,4 @@
+!*ß*
 CODEOWNERS
 ansiblelint
 autofix
@@ -5,3 +6,4 @@ autoupdate
 codespell
 commitlint
 Semesterarbeit
+SonarQube
