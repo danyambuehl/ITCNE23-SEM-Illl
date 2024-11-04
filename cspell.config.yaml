@@ -5,10 +5,13 @@ dictionaryDefinitions:
     addWords: true
 dictionaries:
   # Use `cspell-cli trace word` to check where a work is defined
-  - en_US
-  - de_DE
+  # - en_US
+  # https://github.com/streetsidesoftware/cspell-dicts/blob/main/dictionaries/de_DE/README.md
+  # Add Environment variable: C:\Users\%Username%\AppData\Roaming\npm  -> restart cmd
+  - de_de
   - bash
   - words
+  - html
   - python
 ignorePaths:
   - cspell.config.yaml

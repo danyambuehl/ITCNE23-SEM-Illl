@@ -4,3 +4,4 @@ autofix
 autoupdate
 codespell
 commitlint
+Semesterarbeit

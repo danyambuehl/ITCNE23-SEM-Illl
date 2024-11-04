@@ -5,6 +5,7 @@ ci:
   autoupdate_schedule: monthly
   autofix_commit_msg: |
     chore: auto fixes from pre-commit.com hooks
+# https://cspell.org/docs/getting-started/
 repos:
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v8.15.2
@@ -13,7 +14,7 @@ repos:
         # entry: codespell --relative
         args: [--relative, --no-progress, --no-summary]
         name: Spell check with cspell
-        files: \.(md|txt|py|js|ts|html|css|json)$
+        # files: \.(md|txt|py|js|ts|html|css|json)$
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
