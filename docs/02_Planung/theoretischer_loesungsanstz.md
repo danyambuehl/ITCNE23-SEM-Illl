@@ -39,9 +39,12 @@ Für das Projekt wird eine Open-Source-Lösung implementiert, die folgende Kompo
 
 Die Plattform wird vollständig automatisiert:
 
-- Automatische Ausführung bei jedem Push in das Repository
+- Automatische Ausführung der Pipeline bei jedem Push in das Repository
+- Integration von SonarQube in die GitLab Pipeline
+- Automatisierte Überprüfung von Ansible-Playbooks und YAML-Dateien
 - Automatische Erstellung von Reports und Dashboards
-- Hilfestellung im Entwicklungsprozess durch Pre-Commit Hooks
+- Quality Gates automatisiertes ablehnen oder akzeptieren von Merge Requests
+- Hilfestellung im Entwicklungsprozess durch Pre-Commit Hooks und CSpell
 
 ### Monitoring und Reporting
 
@@ -74,11 +77,6 @@ flowchart TB
         SonarQube
         Dashboard
         QualityGate
-        Documentation
-    end
-
-    subgraph Reports["Reporting"]
-        Dashboard
         Documentation
     end
 
@@ -119,8 +117,9 @@ Der gewählte Lösungsansatz bietet mehrere Vorteile:
 
 ### Unterstützung und Verbesserung
 
-- **Unterstützung für verschiedene Sprachen und Technologien**: Breite Kompatibilität.
-- **Verbesserung der Codequalität und Lesbarkeit**: Durch kontinuierliche Überprüfung und Feedback.
+- **Unterstützung für verschiedene Sprachen und Technologien**: Breite Kompatibilität für zukünftige Projekte.
+- **Verbesserung der Codequalität und Lesbarkeit**: Durch kontinuierliche Überprüfung
+- **Schnelle Feedback schleifen**: Sofortige Rückmeldung für Entwickler und Teams.
 
 ### Zusammenarbeit und Produktivität
 

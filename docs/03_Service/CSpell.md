@@ -2,7 +2,7 @@
 layout: default
 title: CSpell
 parent: Service
-nav_order: 2
+nav_order: 3
 ---
 
 ## CSpell
@@ -37,11 +37,12 @@ In einem Dokument kann die Rechtschreibprüfung für eine Zeile oder einen Absch
 <!-- /* cSpell:disable */ -->            # Deaktiviert die Rechtschreibprüfung
 <!-- /* cSpell:enable */ -->             # Aktiviert die Rechtschreibprüfung
 ```
+<!-- /* cSpell:disable */ -->
 
 ### Konfiguration [^2] [^3] [^4]
 
 Die Konfiguration für `cspell` befindet sich im Repository in der Datei `cspell.config.yaml`.
-Hier definiere ich die Wörterbücher, die verwendet werden sollen, sowie die Pfade, die ignoriert werden sollen. Zusätzlich haben wir ein Muster definiert, um das `ß`-Symbol zu verbieten.
+ Hier definiere ich die Wörterbücher, die verwendet werden sollen, sowie die Pfade, die ignoriert werden sollen. Zusätzlich haben wir ein Muster definiert, um das `ß`-Symbol zu verbieten.
 
 ```yaml
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: Sourcecode
 parent: Service
-nav_order: 3
+nav_order: 4
 ---
 
 ## Sourcecode
@@ -13,7 +13,7 @@ Der Sourcecode des Projekts ist auf GitLab verfügbar. Der Code ist in Python ge
 
 ## Service
 
-Der Service läuft momentan auf einem virtuellen Server bei AWS und wird mit Docker-Containern bereitgestellt. 
+Der Service läuft momentan auf einem virtuellen Server bei AWS und wird mit Docker-Containern bereitgestellt.
 
 [Service](http://semsearch-bau.ddns.net/){: .btn }
 
