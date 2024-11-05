@@ -6,20 +6,36 @@ ci:
   autofix_commit_msg: |
     chore: auto fixes from pre-commit.com hooks
 # https://cspell.org/docs/getting-started/
+default_language_version:
+    python: python3.11
 repos:
+  # Self defined hook to replace ß with ss
+  - repo: local
+    hooks:
+      - id: replace-ss
+        name: Replace ß with ss
+        entry: sed -i 's/ß/ss/g'    # s=substitute, g=global(not just first)
+        language: system
+        exclude: ^\.pre-commit-config   # Exclude this file
+  # Hook for spell checking with cspell config file cspell.config.yaml
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v8.15.2
     hooks:
       - id: cspell
-        # entry: codespell --relative
         args: [--relative, --no-progress, --no-summary]
         name: Spell check with cspell
         # files: \.(md|txt|py|js|ts|html|css|json)$
+  # Pre-commit hooks for checking code style
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
+      - id: trailing-whitespace           # Trims trailing whitespace
+      - id: end-of-file-fixer             # Ensure files end with a newline
+      - id: check-case-conflict           # Check for files with names that differ only in case
+      - id: check-illegal-windows-names   # Check for files with illegal windows filenames
+      - id: check-symlinks                # Check for symlinks which are broken
+      - id: check-yaml                    # Check yaml files for syntax errors
+
   # - repo: https://github.com/adrienverge/yamllint
   #   rev: v1.26.3
   #   hooks:
@@ -33,7 +49,7 @@ repos:
   #   hooks:
   #     - id: codespell
   - repo: https://github.com/Woile/commitizen     # Check if commit messages are formatted correctly
-    rev: v2.20.3
+    rev: v3.30.0
     hooks:
       - id: commitizen
         stages: [commit-msg]
