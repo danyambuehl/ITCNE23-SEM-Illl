@@ -8,7 +8,7 @@ Semesterarbeit
 SonarQube
 Einreichungsformular
 gantt
-ITCNE24-SEM-llll
+ITCNE
 startuml
 skinparam
 enduml
@@ -18,3 +18,6 @@ ddns
 GPTAPI
 Benachrichtigungsfunktion
 NABC
+Dörzbach
+Dany
+Ambühl

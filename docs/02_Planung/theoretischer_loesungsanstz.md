@@ -56,17 +56,25 @@ Die Plattform wird vollständig automatisiert:
 
 ```mermaid
 flowchart TB
+    subgraph "Entwickler"
+        Repository["Git Repository"]
+        pre-commit["Pre-Commit Hooks"]
+        CSpell["CSpell Checker"]
+    end
     direction TB
     subgraph GitLab["GitLab Environment"]
-        Repository
         Pipeline["GitLab Pipeline"]
-        Pages["GitLab Pages"]
+        YAML["YAML Lint"]
+        AnsibleLint["Ansible-Lint"]
+        Validation["Validation Pipeline"]
+        MergeRequest["Merge Request"]
     end
 
     subgraph QualityTools["Quality Tools"]
         SonarQube
-        AnsibleLint["Ansible-Lint"]
-        CSpell["CSpell Checker"]
+        Dashboard
+        QualityGate
+        Documentation
     end
 
     subgraph Reports["Reporting"]
@@ -74,10 +82,19 @@ flowchart TB
         Documentation
     end
 
-    Repository -->|trigger| Pipeline
-    Pipeline -->|execute| QualityTools
-    QualityTools -->|generate| Reports
-    Reports -->|publish| Pages
+    pre-commit -->|integrates| CSpell
+    pre-commit -->|check| Repository
+    Pipeline -->|execute| YAML
+    Pipeline -->|execute| AnsibleLint
+    YAML -->|analyze| SonarQube
+    AnsibleLint -->|analyze| SonarQube
+    SonarQube -->|generate| Dashboard
+    SonarQube -->|check| QualityGate
+    Dashboard -->|shows| Documentation
+    Repository -->|push triggers| Pipeline
+    QualityGate -->|check complies| Validation
+    Validation --> | passed or failed  | MergeRequest
+
 ```
 <!-- /* cSpell:enable */ -->
 
@@ -85,18 +102,38 @@ flowchart TB
 
 Der gewählte Lösungsansatz bietet mehrere Vorteile:
 
-- Integration in bestehende Entwicklungsprozesse durch GitLab Pipeline
-- Automatisierte Qualitätssicherung ohne manuelle Eingriffe
-- Standardisierung durch vordefinierte Regeln
-- Transparente Dashboards und Berichte für Entwickler und Management
-- Skalierbarkeit durch Kubernetes-Plattform
-- Flexibilität durch Open-Source-Tools und Plugins
-- Unterstützung für verschiedene Sprachen und Technologien
-- Verbesserung der Codequalität und Lesbarkeit
-- Frühzeitige Erkennung von Fehlern und Problemen
-- Effiziente Zusammenarbeit im Team
-- Erhöhung der Produktivität und Qualität
-- Reduzierung von manuellen Aufwänden und Fehlern
-- Kontinuierliche Verbesserung der Prozesse und Ergebnisse
-- Erfüllung von Qualitätsstandards und Best Practices
-- Einhaltung von Sicherheitsrichtlinien und Compliance-Vorgaben
+### Integration und Automatisierung
+
+- **Integration in bestehende Entwicklungsprozesse**: Nahtlose Einbindung durch GitLab Pipeline.
+- **Automatisierte Qualitätssicherung**: Reduziert manuelle Eingriffe und erhöht die Effizienz.
+
+### Standardisierung und Transparenz
+
+- **Standardisierung**: Durch vordefinierte Regeln wird eine einheitliche Codequalität sichergestellt.
+- **Transparente Dashboards und Berichte**: Bieten klare Einblicke für Entwickler und Management.
+
+### Skalierbarkeit und Flexibilität
+
+- **Skalierbarkeit**: Nutzung der Kubernetes-Plattform ermöglicht einfache Skalierung.
+- **Flexibilität**: Einsatz von Open-Source-Tools und Plugins für verschiedene Anforderungen.
+
+### Unterstützung und Verbesserung
+
+- **Unterstützung für verschiedene Sprachen und Technologien**: Breite Kompatibilität.
+- **Verbesserung der Codequalität und Lesbarkeit**: Durch kontinuierliche Überprüfung und Feedback.
+
+### Zusammenarbeit und Produktivität
+
+- **Effiziente Zusammenarbeit im Team**: Bessere Kommunikation und Koordination.
+- **Erhöhung der Produktivität und Qualität**: Durch automatisierte Prozesse und klare Standards.
+
+### Fehlerreduktion und Sicherheit
+
+- **Frühzeitige Erkennung von Fehlern und Problemen**: Minimiert Risiken und verbessert die Stabilität.
+- **Reduzierung von manuellen Aufwänden und Fehlern**: Automatisierung reduziert menschliche Fehler.
+- **Einhaltung von Sicherheitsrichtlinien und Compliance-Vorgaben**: Sicherstellung der Konformität.
+
+### Kontinuierliche Verbesserung
+
+- **Kontinuierliche Verbesserung der Prozesse und Ergebnisse**: Durch regelmässige Überprüfung und Anpassung.
+- **Erfüllung von Qualitätsstandards und Best Practices**: Sicherstellung hoher Qualitätsstandards.

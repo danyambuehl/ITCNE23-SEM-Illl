@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Einleitung 
+title: Einleitung
 nav_order: 1
 permalink: /
 banner: /img/banner.png
@@ -9,8 +9,9 @@ banner: /img/banner.png
 
 ## Continuous Code Quality check
 
-Die Semesterarbeit befasst sich mit dem Problem der Qualitätskontrolle von Ansible-Playbooks und der Standardisierung von YAML-Dateien. 
-Das Ziel ist es, ein System zu entwickeln, das diese Prozesse automatisiert und vereinfacht, um Zeit zu sparen, Standards zu setzen und Fehler zu reduzieren.
+Die Semesterarbeit befasst sich mit dem Problem der Qualitätskontrolle von Ansible-Playbooks und der Standardisierung von YAML-Dateien.
+Dabei möchte ich den Ansatz "The Three Ways of DevOps" in DevOps-Prozessen umsetzen und eine Erweiterung der Semesterarbeit ITCNE22-SEM-II entwickeln.
+Ich möchte den Prozess automatisieren um den Feedback Loop zu verkürzen, Standardisieren, Know How sharing und die Qualität der Codebasis verbessern.
 
 ## Zusammenfassung
 
