@@ -15,7 +15,6 @@ nav_order: 10
 | 06.01.2025  | Ergebnis 3. Sprint                                |
 | 29.01.2025  | Abgabe der Arbeit / Abnahme                       |
 
-
 ```mermaid
 gantt
     title Projektplan ITCNE24-SEM-llll
@@ -48,29 +47,36 @@ Folgende Tasks wurden im Sprint 01 geplant:
 
 Folgende Tasks wurden im Sprint 01 bearbeitet:
 
-![Sprint Planning](../img/sprint_01_ende.png)
+![Sprint Planning](../img/sprint_01.png)
 
 ### Sprint Retrospektive
 
 #### Projektmanagement
 
-Während dieses Sprints wurde ein erheblicher Aufwand betrieben, um alle projektspezifischen Dokumente im Bereich Projektmanagement zu erstellen dazu gehören NABC-Analyse, Stakeholder-Analyse, SWOT Analyse, Erhebungstechniken und Risikoanalyse. Dieser Aufwand hat sich als sehr zeitaufwändig herausgestellt da viele Dokumente von Grund auf neu erstellt werden mussten.
+In diesem Sprint wurde das Projektmanagement-Tool effizient genutzt. Alle Tasks wurden in Issues erstellt und in der Sprint Backlog Liste priorisiert.
+Das Projektmanagement hat gut funktioniert und die Issues wurden effizient bearbeitet.
+
+#### Kubernetes
+
+Das Deployment von SonarQube auf Kubernetes hat sich als herausfordernd erwiesen. Es gab Probleme mit der Konfiguration und der Bereitstellung der Persistent Volume Claims.
+Dabei war die fehlende Praxiserfahrung im Umgang mit Kubernetes ein Hindernis. Es war sehr zeitaufwändig, die Probleme zu lösen.
 
 #### Fazit
 
-Dies wurde bewusst so gehandhabt, basierend auf den Schlussfolgerungen der letzten Semesterarbeit. Der Bewertungsraster legt grossen Wert auf Projektmanagement, wodurch nur wenige Punkte von den Fachexperten vergeben werden konnten. Ich hoffe, den Aufwand bei zukünftigen Arbeiten reduzieren zu können, da dann bereits Dokumentvorlagen vorhanden sind und wieder mehr Zeit zu haben, um mich auf das Wesentliche zu konzentrieren, nämlich die Umsetzung.
+Das Projektmanagement konnte dieses mal effizienter durchgeführt werden. Und ich konnte mich auf die Umsetzung der Tasks konzentrieren.
 
 **Keep** Was soll beibehalten werden?
 
 - Zu jedem Task wurde ein Issue erstellt
-- Die Issues wurden in der Sprint Backlog Liste priorisiert
 - Projektmanagement-Tool wurde effizient genutzt
-- Viele Mermaid-Diagramme wurden erstellt
+- Mermaid-Diagramme wurden für die Visualisierung verwendet
+- Helm-Charts wurden für die Kubernetes-Deployment verwendet
 
 **Drop** Mit was sollen ich aufhören?
 
-- Zeitaufwand bei der Dokumentenerstellung
+- Verzicht von Manuellen Manifest-Dateien für Kubernetes-Deployment
+- Verzicht von manuellen Konfigurationen für SonarQube
 
 **Try** Was soll ich im nächsten Sprint ausprobieren?
 
-- Einführung von Dokumentvorlagen zur Beschleunigung der Erstellung
+- CSpell für die Rechtschreibprüfung in Dokumentation und Code

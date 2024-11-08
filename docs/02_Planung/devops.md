@@ -1,11 +1,11 @@
 ---
 layout: default
-title: DevOps Prinzipien
-parent: Service
-nav_order: 2
+title: Three Ways
+parent: Planung
+nav_order: 4
 ---
 
-## DevOps Prinzipien
+## Three Ways [^1] [^2]
 
 Dieses Projekt implementiert die "Three Ways of DevOps":
 
@@ -28,3 +28,8 @@ Dieses Projekt implementiert die "Three Ways of DevOps":
    - Die Integration von SonarQube und pre-commit Hooks ermöglicht es, Best Practices zu dokumentieren und zu standardisieren.
    - SonarQube kann einfach für weitere Projekte wiederverwendet werden.
    - pre-commit Hooks können gut in anderen Projekten ergänzt werden.
+
+## Quellen und Referenzen
+
+[^1]:The Three Ways: The Principles Underpinning DevOps [Retrieved from](https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/)
+[^2]:GitLab the three ways [Retrieved from](https://about.gitlab.com/blog/2022/06/15/gitlab-and-the-three-ways-of-devops/)

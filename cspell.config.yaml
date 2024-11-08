@@ -19,8 +19,15 @@ ignorePaths:
   - _config.yml
   - "*.svg"
 
+# Match code blocks in markdown files
+patterns:
+  - name: markdown_code_block
+    pattern: |
+      /(^\s*```[\s\S]*?^\s*```)/gm
+
 # https://cspell.org/configuration/patterns/#patterns
 languageSettings:
   - languageId: markdown
     ignoreRegExpList:
       - /ß/
+      - markdown_code_block

@@ -51,6 +51,10 @@ Ansible-lint ist ein Werkzeug, das Ansible Playbooks auf Best Practices und Verh
 K3s ist eine leichtgewichtige Kubernetes-Distribution, die von Rancher entwickelt wurde.
 Sie ist besonders platzsparend und verbraucht weniger Ressourcen als herkömmliche Distributionen.
 
+### <img src="../img/helm_icon.png" width="64"> Helm [^10]
+
+Helms ist ein Paketmanager für Kubernetes, der es Benutzern ermöglicht, Anwendungen in Kubernetes zu installieren und zu verwalten.
+
 ## Quellen und Referenzen
 
 [^1]:Github. (n.d.). Github Projects. [Retrieved from](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
@@ -62,3 +66,4 @@ Sie ist besonders platzsparend und verbraucht weniger Ressourcen als herkömmlic
 [^7]:SonarQube [Retrieved from](https://www.sonarsource.com/products/sonarqube/)
 [^8]:Ansible-lint [Retrieved from](https://github.com/ansible/ansible-lint)
 [^9]:K3s[Retrieved from](https://k3s.io/)
+[^10]:Helm [Retrieved from](https://helm.sh/)

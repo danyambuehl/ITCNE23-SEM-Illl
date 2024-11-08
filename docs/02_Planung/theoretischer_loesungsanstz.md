@@ -2,7 +2,7 @@
 layout: default
 title: Theoretischer Lösungsansatz
 parent: Planung
-nav_order: 8
+nav_order: 3
 ---
 
 ## Theoretischer Lösungsansatz

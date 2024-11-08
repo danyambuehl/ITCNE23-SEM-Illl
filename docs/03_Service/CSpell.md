@@ -2,7 +2,7 @@
 layout: default
 title: CSpell
 parent: Service
-nav_order: 3
+nav_order: 4
 ---
 
 ## CSpell
@@ -42,32 +42,45 @@ In einem Dokument kann die Rechtschreibprüfung für eine Zeile oder einen Absch
 ### Konfiguration [^2] [^3] [^4]
 
 Die Konfiguration für `cspell` befindet sich im Repository in der Datei `cspell.config.yaml`.
- Hier definiere ich die Wörterbücher, die verwendet werden sollen, sowie die Pfade, die ignoriert werden sollen. Zusätzlich haben wir ein Muster definiert, um das `ß`-Symbol zu verbieten.
+Hier definiere ich die Wörterbücher, die verwendet werden sollen, sowie die Pfade, die ignoriert werden sollen.
+Zusätzlich haben wir ein Muster definiert, um das `ß`-Symbol zu verbieten.
+Mit dem Muster `markdown_code_block` können Codeblöcke in Markdown-Dateien ignoriert werden.
 
 ```yaml
 ---
 # https://cspell.org/docs/dictionaries-custom/
 dictionaryDefinitions:
   - name: words
-    path: [dictionary.txt](http://_vscodecontentref_/0)
+    path: .config/dictionary.txt
     addWords: true
 dictionaries:
+  # Use `cspell-cli trace word` to check where a work is defined
+  # https://github.com/streetsidesoftware/cspell-dicts/blob/main/dictionaries/de_DE/README.md
   - en_US
-  - de_DE
+  - de_de
   - bash
   - words
   - html
   - python
 ignorePaths:
-  - [cspell.config.yaml](http://_vscodecontentref_/1)
+  - cspell.config.yaml
   - pre-commit-config.yaml
+  - _config.yml
   - "*.svg"
+
+# Match code blocks in markdown files
+patterns:
+  - name: markdown_code_block
+    pattern: |
+      /(^\s*```[\s\S]*?^\s*```)/gm
 
 # https://cspell.org/configuration/patterns/#patterns
 languageSettings:
   - languageId: markdown
     ignoreRegExpList:
       - /ß/
+      - markdown_code_block
+
 ```
 
 ### VSCode-Integration
