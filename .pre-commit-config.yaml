@@ -35,20 +35,8 @@ repos:
       - id: check-illegal-windows-names   # Check for files with illegal windows filenames
       - id: check-symlinks                # Check for symlinks which are broken
       - id: check-yaml                    # Check yaml files for syntax errors
-
-  # - repo: https://github.com/adrienverge/yamllint
-  #   rev: v1.26.3
-  #   hooks:
-  #     - id: yamllint
-  # - repo: https://github.com/pre-commit/mirrors-prettier  # code formatter
-  #   rev: v2.5.1
-  #   hooks:
-  #     - id: prettier
-  # - repo: https://github.com/codespell-project/codespell    # checks for typos.
-  #   rev: v2.1.0
-  #   hooks:
-  #     - id: codespell
-  - repo: https://github.com/Woile/commitizen     # Check if commit messages are formatted correctly
+  # Check if commit messages are formatted correctly
+  - repo: https://github.com/Woile/commitizen     
     rev: v3.30.0
     hooks:
       - id: commitizen
