@@ -14,14 +14,16 @@ Im endeffekt wurden Helm Charts verwendet um SonarQube auf dem Kubernetes Cluste
 
 ## SonarQube mit Helm installieren [^2] [^3]
 
+SonarQube installation mit letzter stabiler Version, Ingress aktivieren und Storage Class setzen.
+
 ```bash
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml         # Set Kube config for Helm
 helm repo add sonarqube https://SonarSource.github.io/helm-chart-sonarqube
 helm repo update
 kubectl create namespace sonarqube
-helm upgrade --install -n sonarqube --version '~8' sonarqube sonarqube/sonarqube \      # Letzte stabile Version
-  --set ingress-nginx.enabled=true \                                                    # Ingress aktivieren
-  --set postgresql.persistence.storageClass="local-path"                                # Storage Class setzen
+helm upgrade --install -n sonarqube --version '~8' sonarqube sonarqube/sonarqube \
+  --set ingress-nginx.enabled=true \
+  --set postgresql.persistence.storageClass="local-path"
 ```
 
 ## Ingress Erstellen
