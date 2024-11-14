@@ -9,8 +9,18 @@ nav_order: 3
 
 ### CSpell
 
-Replace ss with ss
-Replace Abschluss with Abschluss
+Die patterns in der `cspell.config.yaml` Datei sind sehr mächtig und können sehr komplex sein.
+Dabei habe ich viel Zeit damit verbracht, die richtigen patterns zu finden und zu testen.
+
+[Regex tool](https://regex101.com/) können dabei sehr hilfreich sein.
+
+```yaml
+# Match code blocks in markdown files
+patterns:
+  - name: markdown_code_block
+    pattern: |
+      /(^\s*```[\s\S]*?^\s*```)/gm
+```
 
 ### Troubleshooting SonarQube on Kubernetes PVC and PV
 
@@ -51,4 +61,22 @@ Events:
   Type    Reason         Age                 From                         Message
   ----    ------         ----                ----                         -------
   Normal  FailedBinding  30s (x42 over 10m)  persistentvolume-controller  no persistent volumes available for this claim and no storage class is set
+```
+
+### Pipeline Unternehmen Beschraenkungen
+
+Ich hatte immer wieder Probleme wegen internen vorschriften und Einschränkungen.
+Dabei ist das vorgehen leider nicht immer klar Dokumentiert und ich habe viel Zeit damit verbracht, einfach auszuprobieren.
+
+Nur Image von Artifactory sind erlaubt und dort nicht oder sehr schlecht dokumentiert.
+
+```bash
+ERROR: The "python:3.9-slim" image is not present on list of allowed images:
+```
+
+Nur Packages von Internen Artifactory URL sind erlaubt und dies ist nicht klar Dokumentiert.
+Die Packages sind im Artifactory nur schwer zu finden.
+
+```bash
+pip3 config set global.index-url https://artifactory.swisscom.com/artifactory/api/pypi/pypi-remote/simple
 ```

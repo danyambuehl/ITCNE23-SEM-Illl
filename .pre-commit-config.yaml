@@ -1,4 +1,5 @@
 ---
+# "pre-commit run --files example.yml" to check a file
 ci:
   # format compatible with commitlint
   autoupdate_commit_msg: "chore: pre-commit autoupdate"
@@ -6,8 +7,8 @@ ci:
   autofix_commit_msg: |
     chore: auto fixes from pre-commit.com hooks
 # https://cspell.org/docs/getting-started/
-default_language_version:
-    python: python3.11
+# default_language_version:
+#     python: python3.11
 repos:
   # Self defined hook to replace ss with ss
   - repo: local
@@ -41,3 +42,15 @@ repos:
     hooks:
       - id: commitizen
         stages: [commit-msg]
+  #  exclude line from yamllint with following command on the end -> # yamllint disable-line
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+        args:
+          [
+            "-d {extends: relaxed, rules: {line-length: {max: 120}}}",
+            "-s",
+          ]
+        files: \.(yaml|yml)$
+        exclude: Playbooks_OLD/.*
