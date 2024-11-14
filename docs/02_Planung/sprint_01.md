@@ -41,13 +41,13 @@ gantt
 
 Folgende Tasks wurden im Sprint 01 geplant:
 
-![Sprint Planning](../img/sprint_01.png)
+![Sprint Planning](../img/sprint_01_e.png)
 
 ### Sprint Review
 
 Folgende Tasks wurden im Sprint 01 bearbeitet:
 
-![Sprint Planning](../img/sprint_01.png)
+![Sprint Planning](../img/sprint_01_e.png)
 
 ### Sprint Retrospektive
 
