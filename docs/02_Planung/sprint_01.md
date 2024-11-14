@@ -79,4 +79,4 @@ Das Projektmanagement konnte dieses mal effizienter durchgeführt werden. Und ic
 
 **Try** Was soll ich im nächsten Sprint ausprobieren?
 
-- CSpell für die Rechtschreibprüfung in Dokumentation und Code
+- CSpell für die Rechtschreibprüfung in Dokumentation und Code verwenden
