@@ -25,7 +25,7 @@ npm install -g @cspell/dict-de-de   # Installation des deutschen Wörterbuchs
 cspell link add @cspell/dict-de-de  # Verknüpfen des deutschen Wörterbuchs
 cspell link list                    # Überprüfen, ob das Wörterbuch korrekt verknüpft ist
 cspell --config cspell.config.yaml docs/02_Planung/evaluation_code.md  # Überprüfen einer Datei mit Config File
-
+check cspell.config.yaml            # Überprüfen der Konfiguration dictionaries: de_de genau gleich wie id in cspell link list
 ```
 
 ### Einstellungen Dokument

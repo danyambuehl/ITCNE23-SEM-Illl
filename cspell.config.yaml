@@ -8,7 +8,7 @@ dictionaries:
   # Use `cspell-cli trace word` to check where a work is defined
   # https://github.com/streetsidesoftware/cspell-dicts/blob/main/dictionaries/de_DE/README.md
   - en_US
-  - de_de
+  - de-de
   - bash
   - words
   - html

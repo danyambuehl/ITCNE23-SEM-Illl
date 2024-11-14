@@ -22,6 +22,34 @@ patterns:
       /(^\s*```[\s\S]*?^\s*```)/gm
 ```
 
+### CSpell Wörterbuch
+
+```bash
+$ cspell link list
+id    | package            | name              | filename                                                 | dictionaries | errors
+de-de | @cspell/dict-de-de | German Dictionary | /usr/lib/node_modules/@cspell/dict-de-de/cspell-ext.json | de-de        |
+```
+
+Die id `de-de` ist das Wörterbuch für Deutsch.
+
+Und muss im `cspell.config.yaml` genau gleich eingetragen werden. nicht `de_de` oder `de_DE` sondern `de-de`.
+
+```yaml
+---
+# https://cspell.org/docs/dictionaries-custom/
+dictionaryDefinitions:
+  - name: words
+    path: .config/dictionary.txt
+    addWords: true
+  - name: de-de
+    path: node_modules/@cspell/dict-de-de/cspell-ext.json
+dictionaries:
+  # Use `cspell-cli trace word` to check where a work is defined
+  # https://github.com/streetsidesoftware/cspell-dicts/blob/main/dictionaries/de_DE/README.md
+  - en_US
+  - de-de
+```
+
 ### Troubleshooting SonarQube on Kubernetes PVC and PV
 
 Ich habe viel Zeit damit verbracht, die Probleme mit den PVCs und PVs zu lösen.
