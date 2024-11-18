@@ -3,7 +3,7 @@ layout: default
 title: GitLab Main CI/CD Pipeline
 parent: Service
 nav_order: 5
-has_children: true 
+has_children: true
 ---
 
 ## GitLab Main CI/CD Pipeline [^1]
@@ -30,8 +30,6 @@ Die Konfiguration für die GitLab CI/CD Pipeline befindet sich im Repository in 
 ```yaml
 # mandatory:
 # GITLAB_TEST_TOKEN: token to access gitlab for validation stage
-# GITLAB_TOKEN: token to access gitlab for release stage
-# -> create projectaccesstoken semantic-release,developer,scopes: api,write_repository)
 
 workflow:
   rules:

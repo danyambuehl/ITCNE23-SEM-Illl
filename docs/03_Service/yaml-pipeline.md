@@ -10,8 +10,12 @@ nav_order: 5
 ### Einführung
 
 Um YAML linting auf SonarQube durchzuführen, habe ich ein zusätzliches [SonarQube Plugin](https://github.com/sbaudoin/sonar-yaml/) installiert.
-Mit dem Include wird in der YAML-Pipeline ein interns Pipeline-Template eingebunden, das die YAML-Dateien auf SonarQube testet.
-Mit inputs kann das Projekt-Key definiert werden, das auf SonarQube getestet werden soll.
+
+Wie aus dem letzten Sprint gelernt habe, habe ich intern zuerst nach einer Pipeline Vorlage gesucht, die ich verwenden kann.
+
+Dieses Pipeline-Template binde ich mit einem `include` hier ein.
+Mit dem zusätzlichen `inputs` kann der Projekt-Key definiert werden, das auf SonarQube getestet werden soll.
+
 Zusätzlich habe ich ganz nach [GitLab Best Practice](https://docs.gitlab.com/ee/ci/components/#test-the-component) eine Validierung hinzugefügt, die prüft, ob die Jobs erfolgreich waren.
 
 ```mermaid
@@ -43,6 +47,7 @@ variables:
   FF_SCRIPT_SECTIONS: 'true'  # Enable the use of script sections in the pipeline
 
 stages:
+  - test
   - validate
 
 # Validation that the pipeline (https://docs.gitlab.com/ee/ci/components/#test-the-component)

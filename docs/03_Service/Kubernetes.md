@@ -60,15 +60,16 @@ spec:
 
 ## Troubleshooting SonarQube on Kubernetes PVC and PV
 
-Weitere Informationen zu Herausforderungen und Lösungen [Herausforderungen](../04_Abschluss/herausforderungen.md).
+Weitere Informationen zu [Herausforderungen](../04_Abschluss/herausforderungen.md) und Lösungen.
 
 ## Helm Charts commands
 
 ```bash
 helm list -a
-helm delete sonarqube
+helm get all sonarqube
 helm get values sonarqube
 helm status sonarqube
+helm uninstall sonarqube
 ```
 
 ## Quellen und Referenzen
