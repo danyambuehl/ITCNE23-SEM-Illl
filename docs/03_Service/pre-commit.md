@@ -89,6 +89,11 @@ Um sicherzustellen, dass `pre-commit` vor jedem Commit ausgeführt wird, müssen
    /c/Users/TAAAMDA6/AppData/Local/Microsoft/WindowsApps/python3.11.exe -m venv myenv   # Path to python 3.11
    source myenv/Scripts/activate      # Activate the virtual environment
    pip install pre-commit             # Install pre-commit
+
+   or
+
+   brew install pre-commit
+   pre-commit --version
    ```
 
 2. Führen Sie die Hooks manuell aus (optional):
