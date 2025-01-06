@@ -17,7 +17,7 @@ repos:
         name: Replace ss with ss
         entry: sed -i '' 's/ss/ss/g'    # s=substitute, g=global(not just first)
         language: system
-        exclude: ^(\.pre-commit-config|docs/03_Service/CSpell)$   # Exclude these files
+        exclude: ^(\.pre-commit-config|docs/03_Service/CSpell|.*\.png)$   # Exclude these files and PNG files
   # Hook for spell checking with cspell config file cspell.config.yaml
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v8.15.2
