@@ -87,4 +87,4 @@ Quellen und Referenzen:
 
 [^1]:GitLab Best Practice [Retrieved from](https://docs.gitlab.com/ee/ci/components/#test-the-component)
 [^2]:GitLab CI/CD Workflow [Retrieved from](https://docs.gitlab.com/ee/ci/yaml/workflow.html)
-[^3]:SonarQube Plugin [Retrieved from](https://github.com/sbaudoin/sonar-yaml/?tab=readme-ov-file)
+[^3]:SonarQube Plugin for YAML[Retrieved from](https://github.com/sbaudoin/sonar-yaml/?tab=readme-ov-file)

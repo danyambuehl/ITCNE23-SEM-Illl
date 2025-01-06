@@ -50,6 +50,18 @@ dictionaries:
   - de-de
 ```
 
+### CSpell installation Issuer Zertifikat
+
+Beim versuch CSpell zu installieren ist ein Problem mit dem Zertifikat aufgetaucht.
+
+```bash
+error request to https://registry.npmjs.org/cspell failed, reason: unable to get local issuer certificate
+
+npm config set registry http://registry.npmjs.org/  # Anderes Registry verwenden
+npm config set strict-ssl false  # SSL abschalten
+npm install -g cspell            # nochmals installieren
+```
+
 ### Troubleshooting SonarQube on Kubernetes PVC and PV
 
 Ich habe viel Zeit damit verbracht, die Probleme mit den PVCs und PVs zu lösen.

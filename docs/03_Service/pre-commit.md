@@ -38,7 +38,7 @@ repos:
     hooks:
       - id: replace-ss
         name: Replace ss with ss
-        entry: sed -i 's/ss/ss/g'    # s=substitute, g=global(not just first) - Regular Expression Tool https://regex101.com/
+        entry: sed -i '' 's/ss/ss/g'    # s=substitute, g=global(not just first) - Regular Expression Tool https://regex101.com/
         language: system
         exclude: ^(\.pre-commit-config|docs/03_Service/CSpell)$   # Exclude these files
   # Hook for spell checking with cspell config file cspell.config.yaml
@@ -83,7 +83,10 @@ repos:
 
 Um sicherzustellen, dass `pre-commit` vor jedem Commit ausgeführt wird, müssen Sie `pre-commit` installieren und die Hooks aktivieren:
 
-1. Installieren Sie `pre-commit`:
+1. Installiere und konfiguriere zuerst CSpell:
+   [Link to CSpell](CSpell.md)
+
+2. Installieren Sie `pre-commit`:
 
    ```sh
    /c/Users/TAAAMDA6/AppData/Local/Microsoft/WindowsApps/python3.11.exe -m venv myenv   # Path to python 3.11
@@ -92,11 +95,11 @@ Um sicherzustellen, dass `pre-commit` vor jedem Commit ausgeführt wird, müssen
 
    or
 
-   brew install pre-commit
-   pre-commit --version
+   brew install pre-commit      # Install pre-commit
+   pre-commit --version         # Check Version
    ```
 
-2. Führen Sie die Hooks manuell aus (optional):
+3. Führen Sie die Hooks manuell aus (optional):
 
    ```sh
    pre-commit run --all-files

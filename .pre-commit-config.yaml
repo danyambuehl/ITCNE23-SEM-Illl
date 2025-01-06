@@ -15,7 +15,7 @@ repos:
     hooks:
       - id: replace-ss
         name: Replace ss with ss
-        entry: sed -i 's/ss/ss/g'    # s=substitute, g=global(not just first)
+        entry: sed -i '' 's/ss/ss/g'    # s=substitute, g=global(not just first)
         language: system
         exclude: ^(\.pre-commit-config|docs/03_Service/CSpell)$   # Exclude these files
   # Hook for spell checking with cspell config file cspell.config.yaml
@@ -37,7 +37,7 @@ repos:
       - id: check-symlinks                # Check for symlinks which are broken
       - id: check-yaml                    # Check yaml files for syntax errors
   # Check if commit messages are formatted correctly
-  - repo: https://github.com/Woile/commitizen     
+  - repo: https://github.com/Woile/commitizen
     rev: v3.30.0
     hooks:
       - id: commitizen

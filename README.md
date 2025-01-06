@@ -1,20 +1,11 @@
-## Der Traum vom Wohnen in einer Zürcher Baugenossenschaft
+## Continuous Code Quality check
 
-In meiner Semesterarbeit widme ich mich dem aktuellen Problem, erschwinglichen Wohnraum in Zürich zu finden.
-Mein Ansatz hierzu erfolgt aus der Perspektive eines Informatikers, indem ich moderne Technologien nutze, um den Zugang zu freien Genossenschaftswohnungen effizienter zu gestalten.
+Die Semesterarbeit befasst sich mit dem Problem der Qualitätskontrolle von Ansible-Playbooks und der Standardisierung von YAML-Dateien.
+Dabei möchte ich den Ansatz "The Three Ways of DevOps" in DevOps-Prozessen umsetzen und eine Erweiterung der Semesterarbeit ITCNE22-SEM-II entwickeln.
+Ich möchte den Prozess automatisieren um den Feedback Loop zu verkürzen, Standardisieren, Know How sharing und die Qualität der Codebasis verbessern.
 
-Und wer weiss, mit ein bisschen Glück und viel Code könnte meine Arbeit dazu beitragen, dass die nächste Wohnungssuche für eine Genossenschaft in Zürich so angenehm wie ein Spaziergang entlang des Zürichsees Ufers wird. Und vielleicht auch für dich eine passende Wohnung bereithält.
-
-[Link to Dokumentation](https://danyambuehl.github.io/ITCNE23-SEM-Ill/)
+[Link to Dokumentation](https://danyambuehl.github.io/ITCNE23-SEM-Illl/)
 
 ## Sourcecode
 
-Der Sourcecode des Projekts ist auf GitLab verfügbar. Der Code ist in Python geschrieben und verwendet die Flask-Bibliothek für die Webanwendung. Die Überwachungsfunktion basiert auf künstlicher Intelligenz und verwendet die ChatGPT-API von OpenAI.
-
-[Link to GitLab](https://gitlab.com/ambuehld/sem_search_bau)
-
-## Service
-
-Der Service läuft momentan auf einem virtuellen Server bei AWS und wird mit Docker-Containern bereitgestellt.
-
-[Link to Service](http://semsearch-bau.ddns.net/)
+Der Sourcecode des Projekts ist nur intern verfügbar.
