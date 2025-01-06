@@ -2,7 +2,7 @@
 layout: default
 title: GitLab CI/CD Ansible-Pipeline
 parent: GitLab Main CI/CD Pipeline
-nav_order: 6
+nav_order: 4
 ---
 
 ## GitLab CI/CD Ansible-Pipeline [^1] [^2] [^3]
@@ -108,3 +108,9 @@ ensure-jobs-added:
         fi
       done
 ```
+
+Quellen und Referenzen:
+
+[^1]:GitLab Best Practice [Retrieved from](https://docs.gitlab.com/ee/ci/components/#test-the-component)
+[^2]:GitLab CI/CD Workflow [Retrieved from](https://docs.gitlab.com/ee/ci/yaml/workflow.html)
+[^3]:SonarQube Plugin [Retrieved from](https://github.com/sbaudoin/sonar-ansible)
