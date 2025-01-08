@@ -11,10 +11,12 @@ Hier werden einige Manuelle Tests durchgeführt um die Funktionen zu überprüfe
 
 ![Testing](../img/testing.png)
 
-| Description | Test Step | Expected Result | Status | Screen |
+| Beschreibung | Test Schritt | Erwartetes Resultat | Status | Screen |
 | ---         | ---       | ---             | ---    |  ---   |
-| `find_div_dynamic`| Wohnung mit der find_div:dynamic finden und informieren | find_div_dynamic success log and message send  | true | [Screenshot](../img/testing/find_div_dynamic.png) |
-| `find_div_dynamic`| Neue Class Name gleiches Ziel für find_div_dynamic | find_div_dynamic neuer   | Device Paused | [Screenshot](../img/testing/find_div_dynamic2.png) |
+| `pre-commit`| Überprüfen der pre-commit Autokorrektur | Whitespace, end of file werden automatisch korrigiert  | :white_check_mark: | [Screenshot](../img/testing/pre_commit.png) |
+| `pre-commit`| Überprüfen der pre-commit YAML Validierung | YAML lint gibt Warnung  | :white_check_mark: | [Screenshot](../img/testing/pre_commit.png) |
+| `cSpell`| Überprüfen der cSpell Rechtschreibung | Rechtschreibfehler werden angezeigt  | :white_check_mark: | [Screenshot](../img/testing/cSpell.png) |
+| `ss Replacement` | Überprüfen der ss Replacement | ß wird durch ss ersetzt  | :white_check_mark: | [Screenshot](../img/testing/ss_replacement.png) |
 
 ## Automatisches Testing
 
