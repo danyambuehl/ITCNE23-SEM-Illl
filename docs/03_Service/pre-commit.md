@@ -36,9 +36,9 @@ repos:
   # Self defined hook to replace ss with ss
   - repo: local
     hooks:
-      - id: replace-ss
-        name: Replace ss with ss
-        entry: sed -i '' 's/ss/ss/g'    # s=substitute, g=global(not just first) - Regular Expression Tool https://regex101.com/
+      - id: replace-ß
+        name: Replace ß with ss
+        entry: sed -i '' 's/ß/ss/g'    # s=substitute, g=global(not just first) - Regular Expression Tool https://regex101.com/
         language: system
         exclude: ^(\.pre-commit-config|docs/03_Service/CSpell)$   # Exclude these files
   # Hook for spell checking with cspell config file cspell.config.yaml
