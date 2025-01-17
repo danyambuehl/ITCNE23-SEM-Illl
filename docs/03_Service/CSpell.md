@@ -44,7 +44,7 @@ In einem Dokument kann die Rechtschreibprüfung für eine Zeile oder einen Absch
 
 Die Konfiguration für `cspell` befindet sich im Repository in der Datei `cspell.config.yaml`.
 Hier definiere ich die Wörterbücher, die verwendet werden sollen, sowie die Pfade, die ignoriert werden sollen.
-Zusätzlich haben wir ein Muster definiert, um das `ß`-Symbol zu verbieten.
+Zusätzlich haben ich ein Muster definiert, um das `ß`-Symbol zu verbieten.
 Mit dem Muster `markdown_code_block` können Codeblöcke in Markdown-Dateien ignoriert werden.
 
 ```yaml
