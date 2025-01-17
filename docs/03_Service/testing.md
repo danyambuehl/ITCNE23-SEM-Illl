@@ -19,12 +19,6 @@ Hier werden einige Manuelle Tests durchgeführt um die Funktionen zu überprüfe
 | `cSpell`| Überprüfen der cSpell Rechtschreibung | Rechtschreibfehler werden angezeigt  | OK | [Screenshot](../img/testing/cSpell.png) |
 | `ss Replacement` | Überprüfen der ss Replacement | ss wird durch ss ersetzt  | OK | [Screenshot](../img/testing/ss_replace.png) |
 
-## Automatisches Testing
-
-![Testing](../img/testing2.png)
-
-Hier werden einige Automatische Tests durchgeführt um die Funktionen zu überprüfen.
-
 ### Pipeline Validierung
 
 Die Pipeline wird auf GitLab CI/CD zusätzlich nach Best Practice vorgaben nochmals validiert, um die Konsistenz sicherzustellen.
@@ -63,8 +57,16 @@ ensure-jobs-added:
       done
 ```
 
-### SonarQube Testing
+### SonarQube Code Qualität
 
-Hier eine Übersicht den Gesamten Code des Repos
+Hier eine Übersicht die Code Qualität des Gesamten Code des Repos
 
 [SonarQube Übersicht](../img/testing/sonarqube_overview.png)
+
+Die verschiedenen Issues die gefunden wurden.
+
+[SonarQube Issues](../img/testing/sonarqube_issue.png)
+
+Ein Beispiel eines gefundenen Issues.
+
+[SonarQube Issue](../img/testing/sonarqube_issue_detail.png)
