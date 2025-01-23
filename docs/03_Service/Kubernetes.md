@@ -58,6 +58,12 @@ spec:
                   number: 9000
 ```
 
+## SonarQube Überprüfung
+
+Nach der Installation von SonarQube auf Kubernetes, kann der Code überprüft werden.
+
+[SonarQube Issues](../img/testing/sonarqube_issue.png)
+
 ## Troubleshooting SonarQube on Kubernetes PVC and PV
 
 Weitere Informationen zu [Herausforderungen](../04_Abschluss/herausforderungen.md) und Lösungen.

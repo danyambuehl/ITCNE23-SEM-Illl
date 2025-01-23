@@ -28,10 +28,12 @@ Eine Frage stellen die alle mit JA beantworten können.
 
 ## Inhalt
 
-Einführung mit einer Geschichte: Beginne mit einer kurzen, persönlichen Geschichte oder einem interessanten Fakt, der das Thema deiner Semesterarbeit einführt.
-Dies kann die Aufmerksamkeit des Publikums sofort fesseln.
+Ich habe bei uns im ersten Jahr Ansible eingeführt und nach einiger Annäherung haben sich auch die Windows User langsam daran getraut.
 
-Problemstellung und Motivation: Erkläre, welches Problem du lösen wolltest und warum du dich für dieses Thema entschieden hast. Betone die Relevanz und den praktischen Nutzen deiner Arbeit.
+Wie scheue Reh traten sie vorsichtig aus dem schützenden Dickicht und wagte sich langsam auf die sonnendurchflutete Lichtung im Wald.
+
+Dabei hat sich schnell herausgestellt das dies zu einem völligen Code Chaos führt.
+
 
 Interaktive Demonstration: Anstatt nur Folien zu zeigen, führe eine Live-Demonstration oder ein kurzes Video vor, das deine Arbeit in Aktion zeigt. Dies kann besonders bei technischen Themen sehr wirkungsvoll sein.
 
