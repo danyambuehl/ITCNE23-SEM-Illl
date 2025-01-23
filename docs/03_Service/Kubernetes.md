@@ -58,6 +58,13 @@ spec:
                   number: 9000
 ```
 
+## SonarQube Zugriff
+
+Nach der Installation von SonarQube auf Kubernetes, kann auf die Web-Oberfläche zugegriffen werden.
+Die einbindung von SonarQube in den CI/CD Prozess ist simpel wird mit sonar-project.properties file im Projekt root durchgeführt.
+
+```bash
+
 ## SonarQube Überprüfung
 
 Nach der Installation von SonarQube auf Kubernetes, kann der Code überprüft werden.
