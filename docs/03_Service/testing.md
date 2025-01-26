@@ -61,12 +61,12 @@ ensure-jobs-added:
 
 Hier eine Übersicht die Code Qualität des Gesamten Code des Repos
 
-[SonarQube Übersicht](../img/testing/sonarqube_overview.png)
+![SonarQube Übersicht](../img/testing/sonarqube_overview.png)
 
 Die verschiedenen Issues die gefunden wurden.
 
-[SonarQube Issues](../img/testing/sonarqube_issue.png)
+![SonarQube Issues](../img/testing/sonarqube_issue.png)
 
 Ein Beispiel eines gefundenen Issues.
 
-[SonarQube Issue](../img/testing/sonarqube_issue_detail.png)
+![SonarQube Issue](../img/testing/sonarqube_issue_detail.png)
