@@ -4,6 +4,7 @@ title: GitLab Main CI/CD Pipeline
 parent: Service
 nav_order: 5
 has_children: true
+has_toc: false
 ---
 
 ## GitLab Main CI/CD Pipeline [^1]
