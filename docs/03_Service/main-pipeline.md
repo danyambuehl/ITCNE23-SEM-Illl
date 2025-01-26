@@ -59,5 +59,6 @@ test-sonar-ansible:
 
 ```
 
-Quellen und Referenzen:
+## Quellen und Referenzen
+
 [^1]:GitLab CI/CD Workflow [Retrieved from](https://docs.gitlab.com/ee/ci/yaml/workflow.html)
