@@ -67,7 +67,7 @@ Die einbindung von SonarQube in den CI/CD Prozess ist simpel wird mit sonar-proj
 
 Nach der Installation von SonarQube auf Kubernetes, kann der Code überprüft werden.
 
-[SonarQube Issues](../img/testing/sonarqube_issue.png)
+![SonarQube Issues](../img/testing/sonarqube_issue.png)
 
 ## Troubleshooting SonarQube on Kubernetes PVC and PV
 
