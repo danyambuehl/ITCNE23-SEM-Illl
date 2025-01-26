@@ -41,7 +41,7 @@ gantt
 
 Folgende Tasks wurden im Sprint 03 geplant:
 
-![Sprint Planning](../img/sprint_03.png)
+![Sprint Planning](../img/sprint_03_2.png)
 
 ### Sprint Review
 
